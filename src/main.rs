@@ -20,9 +20,7 @@ impl GWeather {
 
 impl eframe::App for GWeather {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut Frame) {
-        CentralPanel::default().show(ctx, |ui| {
-            app_elements::test(ui);
-        });
+        app_elements::intro(ctx);
     }
 }
 
