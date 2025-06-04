@@ -1,5 +1,6 @@
 // Imports
 use eframe::*;
+use egui_extras::*;
 
 // Resource files
 mod image_handler;
@@ -24,7 +25,8 @@ fn main() -> eframe::Result<(), eframe::Error> {
     run_native(
         "GW ANALYZER",
         options,
-        Box::new(|_cc|{
+        Box::new(|cc|{
+            egui_extras::install_image_loaders(&cc.egui_ctx);
             Ok(Box::new(GWeather {}))
         })
     )

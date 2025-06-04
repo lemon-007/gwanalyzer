@@ -8,7 +8,7 @@ pub fn intro(ctx: &egui::Context) -> egui::InnerResponse<()> {
     CentralPanel::default().show(ctx, |ui| {
         ui.allocate_ui_at_rect(rect_center_screen(ctx, 2.5), |ui| {
             ui.vertical_centered(|ui| {
-                ui.heading("TODO: Format image");
+                ui.image(egui::include_image!("assets/globe.png"));
                 ui.heading("bottom");
             });
         });
