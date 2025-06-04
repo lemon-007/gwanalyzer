@@ -29,4 +29,3 @@ fn main() -> eframe::Result<(), eframe::Error> {
         })
     )
 }
-
