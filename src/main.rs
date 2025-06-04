@@ -1,22 +1,11 @@
 // Imports
-use egui::CentralPanel;
 use eframe::*;
 
 // Resource files
 mod image_handler;
 mod app_elements;
 
-struct GWeather {
-    running: bool,
-}
-
-impl GWeather {
-    fn default() -> Self {
-        Self {
-            running: false,
-        }
-    }
-}
+struct GWeather {}
 
 impl eframe::App for GWeather {
     fn update(&mut self, ctx: &egui::Context, _frame: &mut Frame) {
@@ -33,10 +22,10 @@ fn main() -> eframe::Result<(), eframe::Error> {
 
     // Runs here with options
     run_native(
-        "GWeather",
+        "GW ANALYZER",
         options,
         Box::new(|_cc|{
-            Ok(Box::new(GWeather::default()))
+            Ok(Box::new(GWeather {}))
         })
     )
 }

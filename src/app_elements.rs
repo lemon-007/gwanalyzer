@@ -3,10 +3,17 @@
 
 use egui::*;
 
+// Intro panel. Shows "GW ANALYZER" at the beginning with the logo for 1 second.
 pub fn intro(ctx: &egui::Context) -> egui::InnerResponse<()> {
     CentralPanel::default().show(ctx, |ui| {
-        ui.centered_and_justified(|uix| {
-            uix.heading("GWeather");
-        });
+        //TODO: turn the screen size into a rectangle,
+        //half each pos2
+        //create new rectangle with positions
+        //put widgets in new positions
+        //
+        //ctx.screen_size
+        //ui.allocate_ui_at_rect(Rect, ui)
     })
 }
+
+pub fn get_screen_size() -> Rect {}
